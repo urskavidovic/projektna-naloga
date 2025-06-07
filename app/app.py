@@ -12,7 +12,7 @@ db = client["mojabaza"]  # popravi iz .get_database() v natančno ime baze
 @app.route('/')
 def home():
     db.status.insert_one({"msg": "Pozdrav iz Flask aplikacije!"})
-    return "Pozdravljeni! Aplikacija je povezana z MongoDB."
+    return "Pozdravljeni! Nova verzija aplikacije je aktivna."
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000)
